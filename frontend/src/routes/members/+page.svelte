@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import { onMount } from "svelte";
   
   let members = [];
@@ -12,6 +12,54 @@
         throw new Error(`HTTP error! status: ${res.status}`);
       }
       members = await res.json();
+      console.log('Fetched members:', members); // Debug log
+    } catch (err) {
+      console.error('Error fetching members:', err);
+      error = err.message;
+    } finally {
+      loading = false;
+    }
+  });
+</script> -->
+<script>
+  import { onMount } from "svelte";
+  
+  let members = [];
+  let loading = true;
+  let error = null;
+  
+  // API URL configuration
+  const getApiUrl = () => {
+    // In production (Vercel), use relative URL
+    if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
+      return '/api/members';
+    }
+    // In development, you can use either localhost backend or Vercel preview
+    return 'http://localhost:5000/api/members'; // Keep this for local development
+    // OR use your Vercel preview URL: return 'https://your-app.vercel.app/api/members';
+  };
+  
+  onMount(async () => {
+    try {
+      const apiUrl = getApiUrl();
+      console.log('Fetching from:', apiUrl); // Debug log
+      
+      const res = await fetch(apiUrl);
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      
+      const data = await res.json();
+      
+      // Handle both success response formats
+      if (data.success && data.data) {
+        members = data.data; // If your API returns { success: true, data: [...] }
+      } else if (Array.isArray(data)) {
+        members = data; // If your API returns [...] directly
+      } else {
+        throw new Error('Unexpected response format');
+      }
+      
       console.log('Fetched members:', members); // Debug log
     } catch (err) {
       console.error('Error fetching members:', err);
