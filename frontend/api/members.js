@@ -1,33 +1,78 @@
-// api/members.js - Members API route for Vercel
-import { executeQuery } from '../lib/db';
+import mysql from 'mysql2/promise';
+
+// Database connection using your Railway MySQL
+async function connectDB() {
+  try {
+    const connection = await mysql.createConnection({
+      host: 'interchange.proxy.rlwy.net',
+      port: 25771,
+      user: 'root',
+      password: 'XWEVQBsjPtldbVsqXrQomEmQdkNJkluf',
+      database: 'railway'
+    });
+    return connection;
+  } catch (error) {
+    console.error('Database connection failed:', error);
+    throw error;
+  }
+}
 
 export default async function handler(req, res) {
-  // Only allow GET requests for now (matching your original route)
-  if (req.method !== 'GET') {
-    return res.status(405).json({ 
-      error: 'Method not allowed',
-      message: 'Only GET requests are supported for this endpoint' 
-    });
-  }
+  const { method } = req;
 
   try {
-    console.log('🔍 Fetching members from database...');
-    
-    // Execute the query using async/await instead of callback
-    const results = await executeQuery('SELECT * FROM members');
-    
-    console.log(`✅ Successfully fetched ${results.length} members`);
-    
-    // Return the results in the same format as your original
-    res.status(200).json(results);
-    
-  } catch (err) {
-    console.error('❌ MySQL Query Error:', err);
-    
-    // Return error in same format as your original
+    const connection = await connectDB();
+
+    switch (method) {
+      case 'GET':
+        // Get all members
+        const [members] = await connection.execute('SELECT * FROM members');
+        await connection.end();
+        res.status(200).json(members);
+        break;
+
+      case 'POST':
+        // Add new member
+        const { name, email, phone } = req.body;
+        const [result] = await connection.execute(
+          'INSERT INTO members (name, email, phone) VALUES (?, ?, ?)',
+          [name, email, phone]
+        );
+        await connection.end();
+        res.status(201).json({ 
+          id: result.insertId, 
+          message: 'Member added successfully' 
+        });
+        break;
+
+      case 'PUT':
+        // Update member (use ?id=123 in URL)
+        const { id } = req.query;
+        const { name: updateName, email: updateEmail, phone: updatePhone } = req.body;
+        await connection.execute(
+          'UPDATE members SET name = ?, email = ?, phone = ? WHERE id = ?',
+          [updateName, updateEmail, updatePhone, id]
+        );
+        await connection.end();
+        res.status(200).json({ message: 'Member updated successfully' });
+        break;
+
+      case 'DELETE':
+        // Delete member (use ?id=123 in URL)
+        const { id: deleteId } = req.query;
+        await connection.execute('DELETE FROM members WHERE id = ?', [deleteId]);
+        await connection.end();
+        res.status(200).json({ message: 'Member deleted successfully' });
+        break;
+
+      default:
+        res.status(405).json({ error: 'Method not allowed' });
+    }
+  } catch (error) {
+    console.error('API Error:', error);
     res.status(500).json({ 
-      error: 'Database query failed',
-      message: err.message 
+      error: 'Database operation failed',
+      details: error.message 
     });
   }
 }
