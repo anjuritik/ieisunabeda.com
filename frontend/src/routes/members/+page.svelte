@@ -29,7 +29,7 @@
   let error = null;
   
   // API URL configuration
-  const getApiUrl = () => {
+  /* const getApiUrl = () => {
     // In production (Vercel), use relative URL
     if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
       return '/api/members';
@@ -37,7 +37,26 @@
     // In development, you can use either localhost backend or Vercel preview
     return 'http://localhost:5000/api/members'; // Keep this for local development
     // OR use your Vercel preview URL: return 'https://your-app.vercel.app/api/members';
-  };
+  }; */
+  const getApiUrl = () => {
+  // In production (Vercel), use Render's API endpoint URL
+  if (typeof window !== 'undefined') {
+    const hostname = window.location.hostname;
+
+    if (hostname === 'localhost') {
+      // Local development
+      return 'http://localhost:5000/api/members'; // or 'http://localhost:5000/api/members' for local dev
+    }
+
+    // In Vercel preview/deployment, use your Render backend API URL
+    if (hostname !== 'localhost') {
+      return 'https://ieisbd.onrender.com/api/members'; // Production URL
+    }
+  }
+
+  // For other cases (e.g., server-side rendering, fallback)
+  return 'http://localhost:5000/api/members'; // Local development fallback
+};
   
   onMount(async () => {
     try {
