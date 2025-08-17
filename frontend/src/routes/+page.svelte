@@ -221,6 +221,65 @@ if (browser) {
     </div>
   </div>
 </section>
+<!-- News & Events Section -->
+<section class="container my-5">
+  <h3 class="text-center mb-4">News & Events of IEI</h3>
+  <div class="marquee-container">
+    <marquee behavior="scroll" direction="up" scrollamount="3" height="300" 
+    style="border: 2px solid #ccc; border-radius: 10px; padding: 10px; background-color: #f9f9f9;">
+      <div class="news-item mb-4">
+        <div class="d-flex align-items-center">
+          <img src="https://ieiodisha.org/wp-content/uploads/2024/07/pdf-enrgy.png" alt="Seminar Image" style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%; margin-right: 15px;">
+          <div>
+            <h6 class="font-weight-bold mb-1"><a href="https://ieiodisha.org/all-india-seminar-on-alternative-energy-systems-under-the-aegis-of-its-mechanical-engineering-division-on-the-5th-of-july-2024-at-odisha-state-centre-the-institution-of-engineers-in/" target="_blank" style="text-decoration: none; color: #007bff;">All India Seminar on "Alternative Energy Systems" - July 5, 2024</a></h6>
+            <small class="text-muted">A seminar on alternative energy systems to be held at Odisha State Centre.</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item mb-4">
+        <div class="d-flex align-items-center">
+          <img src="https://ieiodisha.org/wp-content/uploads/2024/10/66th-Annual-General-Body-Meeting-fig-scaled.jpg" alt="AGM Image" style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%; margin-right: 15px;">
+          <div>
+            <h6 class="font-weight-bold mb-1"><a href="https://ieiodisha.org/66th-annual-general-body-meeting/" target="_blank" style="text-decoration: none; color: #007bff;">66th Annual General Body Meeting</a></h6>
+            <small class="text-muted">Join us for the 66th AGM of IEI, discussing future directions.</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item mb-4">
+        <div class="d-flex align-items-center">
+          <img src="https://via.placeholder.com/60" alt="Event Image" style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%; margin-right: 15px;">
+          <div>
+            <h6 class="font-weight-bold mb-1"><a href="https://ieiodisha.org/another-news-event/" target="_blank" style="text-decoration: none; color: #007bff;">Another Upcoming Event</a></h6>
+            <small class="text-muted">Details about an exciting upcoming event will be shared soon.</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item mb-4">
+        <div class="d-flex align-items-center">
+          <img src="https://via.placeholder.com/60" alt="Event Image" style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%; margin-right: 15px;">
+          <div>
+            <h6 class="font-weight-bold mb-1"><a href="https://ieiodisha.org/more-news-link/" target="_blank" style="text-decoration: none; color: #007bff;">More News Coming Soon</a></h6>
+            <small class="text-muted">Stay tuned for more updates on upcoming events and news.</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item mb-4">
+        <div class="d-flex align-items-center">
+          <img src="https://via.placeholder.com/60" alt="Event Image" style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%; margin-right: 15px;">
+          <div>
+            <h6 class="font-weight-bold mb-1"><a href="https://ieiodisha.org/some-other-event/" target="_blank" style="text-decoration: none; color: #007bff;">Some Other Event</a></h6>
+            <small class="text-muted">Don't miss out on this upcoming event at IEI.</small>
+          </div>
+        </div>
+      </div>
+    </marquee>
+  </div>
+</section>
+
 
 <style>
   /* Ensure all images in the carousel have the same height and width */
@@ -284,6 +343,8 @@ if (browser) {
   .dropdown-item:hover {
     background-color: #f1f1f1;
   }
+
+  
 
 </style>
 
