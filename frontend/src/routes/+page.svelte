@@ -75,6 +75,40 @@
   </div>
 </nav>
 <!--End of Mega Menu-->
+<section class="d-flex flex-column align-items-center text-center py-5">
+  <div class="container">
+    <!-- Main Heading -->
+    <h1 class="mb-4 text-md">Message From Chairman & Honorary Secretary</h1>
+
+    <!-- Row for Chairman and Honorary Secretary Info (Horizontal Layout) -->
+    <div class="row justify-content-center align-items-center">
+      
+      <!-- Chairman Section -->
+      <div class="col-md-6 d-flex align-items-center justify-content-center mb-4">
+        <img src="path-to-chairman-photo.jpg" alt="Chairman Photo" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px;">
+        <div class="ms-3">
+          <h2>Chairman</h2>
+          <p class="fs-5 text-secondary">
+            Dear members : from Chairman, I would like to express my sincere gratitude for your support and dedication to the Institute. I am honored to be a part of this institution and look forward to continuing our work together.
+          </p>
+        </div>
+      </div>
+
+      <!-- Honorary Secretary Section -->
+      <div class="col-md-6 d-flex align-items-center justify-content-center mb-4">
+        <img src="path-to-secretary-photo.jpg" alt="Honorary Secretary Photo" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px;">
+        <div class="ms-3">
+          <h2>Honorary Secretary</h2>
+          <p class="fs-5 text-secondary">
+            Dear members : from Secretary, I would like to express my sincere gratitude for your support and dedication to the Institute. I am honored to be a part of this institution and look forward to continuing our work together.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 <section class="hero d-flex align-items-center text-center text-white">
   <div class="container py-5">
