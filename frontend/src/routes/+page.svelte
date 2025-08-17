@@ -74,40 +74,54 @@
     </div>
   </div>
 </nav>
-<!--End of Mega Menu-->
+
+<!-- Start of message from Chairman and Honorary Secretary -->
 <section class="d-flex flex-column align-items-center text-center py-5">
   <div class="container">
     <!-- Main Heading -->
-    <h1 class="mb-4 text-md">Message From Chairman & Honorary Secretary</h1>
+    <h2 class="display-6 text-primary mb-4">Message From Chairman & Honorary Secretary</h2>
 
-    <!-- Row for Chairman and Honorary Secretary Info (Horizontal Layout) -->
+    <!-- Row for Chairman and Honorary Secretary Info (Grid Layout) -->
     <div class="row justify-content-center align-items-center">
-      
-      <!-- Chairman Section -->
-      <div class="col-md-6 d-flex align-items-center justify-content-center mb-4">
-        <img src="path-to-chairman-photo.jpg" alt="Chairman Photo" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px;">
-        <div class="ms-3">
-          <h2>Chairman</h2>
-          <p class="fs-5 text-secondary">
-            Dear members : from Chairman, I would like to express my sincere gratitude for your support and dedication to the Institute. I am honored to be a part of this institution and look forward to continuing our work together.
-          </p>
-        </div>
+
+      <!-- Column 1: Chairman Photo, Name & Designation -->
+      <div class="col-md-3 d-flex flex-column align-items-center mb-4">
+        <!-- Chairman Photo -->
+        <img src="path-to-chairman-photo.jpg" alt="Chairman Photo" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px;">
+        <!-- Chairman Name & Designation -->
+        <p class="fs-5 text-dark mb-1">John Doe</p>
+        <p class="fs-6 text-muted mb-3">Chief Executive Officer</p>
       </div>
 
-      <!-- Honorary Secretary Section -->
-      <div class="col-md-6 d-flex align-items-center justify-content-center mb-4">
-        <img src="path-to-secretary-photo.jpg" alt="Honorary Secretary Photo" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px;">
-        <div class="ms-3">
-          <h2>Honorary Secretary</h2>
-          <p class="fs-5 text-secondary">
-            Dear members : from Secretary, I would like to express my sincere gratitude for your support and dedication to the Institute. I am honored to be a part of this institution and look forward to continuing our work together.
-          </p>
-        </div>
+      <!-- Column 2: Secretary Message -->
+      <div class="col-md-3 d-flex flex-column align-items-center mb-4">
+        <p class="fs-5 text-secondary text-justify" style="text-align: justify;">
+          Curabitur maximus ipsum non justo tincidunt, sed iaculis metus pellentesque. Nulla facilisi. Integer eget augue euismod, rhoncus eros nec, euismod turpis. Quisque vehicula purus non urna tempus, eu sollicitudin nulla convallis. Aenean facilisis efficitur libero, ut tincidunt purus suscipit eget.
+        </p>
+      </div>
+
+      <!-- Column 3: Secretary Photo, Name & Designation -->
+      <div class="col-md-3 d-flex flex-column align-items-center mb-4">
+        <!-- Secretary Photo -->
+        <img src="path-to-secretary-photo.jpg" alt="Secretary Photo" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px;">
+        <!-- Secretary Name & Designation -->
+        <p class="fs-5 text-dark mb-1">Jane Smith</p>
+        <p class="fs-6 text-muted mb-3">Secretary General</p>
+      </div>
+
+      <!-- Column 4: Chairman Message -->
+      <div class="col-md-3 d-flex flex-column align-items-center mb-4">
+        <p class="fs-5 text-secondary text-justify" style="text-align: justify;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique, risus et bibendum varius, tortor velit tincidunt erat, sit amet scelerisque lorem odio non turpis. Vivamus auctor, libero a blandit suscipit, urna felis feugiat enim, et iaculis turpis lorem id justo.
+        </p>
       </div>
 
     </div>
   </div>
 </section>
+
+
+<!--ENd of message from Chairman and Honorary Secretary-->
 
 
 <section class="hero d-flex align-items-center text-center text-white">
