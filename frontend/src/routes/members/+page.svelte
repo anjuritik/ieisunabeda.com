@@ -4,40 +4,6 @@
   let members = [];
   let loading = true;
   let error = null;
-  
-  onMount(async () => {
-    try {
-      const res = await fetch("http://localhost:5000/api/members");
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
-      members = await res.json();
-      console.log('Fetched members:', members); // Debug log
-    } catch (err) {
-      console.error('Error fetching members:', err);
-      error = err.message;
-    } finally {
-      loading = false;
-    }
-  });
-</script> -->
-<script>
-  import { onMount } from "svelte";
-  
-  let members = [];
-  let loading = true;
-  let error = null;
-  
-  // API URL configuration
-  /* const getApiUrl = () => {
-    // In production (Vercel), use relative URL
-    if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
-      return '/api/members';
-    }
-    // In development, you can use either localhost backend or Vercel preview
-    return 'http://localhost:5000/api/members'; // Keep this for local development
-    // OR use your Vercel preview URL: return 'https://your-app.vercel.app/api/members';
-  }; */
   const getApiUrl = () => {
   // In production (Vercel), use Render's API endpoint URL
   if (typeof window !== 'undefined') {
@@ -87,7 +53,41 @@
       loading = false;
     }
   });
+</script> -->
+<script>
+  import { onMount } from "svelte";
+  
+  // Static members data
+  let members = [
+    { name: 'Premananda Maity', designation: 'President',email:'johndoe@example.com', phone:'+1234567890'},
+    { name: 'Sanjay Bisyoee', designation: 'Secretary',email:'johndoe@example.com', phone:'+1234567890' },
+    { name: 'Alex Johnson', designation: 'Secretary',email:'johndoe@example.com', phone:'+1234567890' },
+    { name: 'Emily Davis', designation: 'Treasurer',email:'johndoe@example.com', phone:'+1234567890' },
+    { name: 'Michael Brown', designation: 'Member',email:'johndoe@example.com', phone:'+1234567890' },
+    { name: 'Sarah Wilson', designation: 'Member',email:'johndoe@example.com', phone:'+1234567890' }
+  ];
+  
+  let loading = false;
+  let error = null;
+  
+  // Simulate a small delay to mimic data fetching process
+  onMount(async () => {
+    try {
+      // Simulate loading state
+      loading = true;
+      setTimeout(() => {
+        loading = false;
+      }, 1000); // Simulating a 1-second delay
+
+      console.log('Static members:', members); // Debug log
+    } catch (err) {
+      console.error('Error fetching members:', err);
+      error = err.message;
+      loading = false;
+    }
+  });
 </script>
+
 
 <!-- Bootstrap 5 CSS -->
  

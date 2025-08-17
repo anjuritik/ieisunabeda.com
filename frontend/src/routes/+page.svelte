@@ -12,8 +12,6 @@ if (browser) {
     console.error('Error loading Bootstrap JS', err);
   });
 }
-
-
    onMount(() => {
     setupDropdownHover();
   }); 
