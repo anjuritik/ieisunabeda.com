@@ -9,20 +9,34 @@
   });
 </script>
 
-<!--Start of Mega Menu-->
+<!--Start of Navbar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
   <div class="container-fluid">
+    <!-- Navbar Brand -->
     <a class="navbar-brand fw-bold" href="#">IEI</a>
+
+    <!-- Toggler for Mobile View -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- Top Buttons (Members, Academics, Contact Us) -->
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+      <a href="/members" class="btn btn-light fw-normal text-dark px-4 py-2">Members</a>
+      <a href="/academics" class="btn btn-light fw-normal text-dark px-4 py-2">Academics</a>
+      <a href="/gallery" class="btn btn-light fw-normal text-dark px-4 py-2">Photo Gallery</a>
+      <a href="/contact" class="btn btn-light fw-normal text-dark px-4 py-2">Contact Us</a>
+    </div>
+    
+
+    <!-- Navbar Collapse -->
     <div class="collapse navbar-collapse" id="mainNavbar">
+      <!-- Centered Navbar Links -->
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 
         <!-- Home Mega Menu -->
         <li class="nav-item dropdown position-static">
-          <a class="nav-link dropdown-toggle" href="iei-Home.aspx" id="homeDropdown" role="button">
+          <a class="nav-link dropdown-toggle" href="iei-Home.aspx" id="homeDropdown" role="button" data-bs-toggle="dropdown">
             <i class="fa fa-home"></i> Home
           </a>
           <div class="dropdown-menu p-4 mega-menu" aria-labelledby="homeDropdown">
@@ -50,7 +64,7 @@
 
         <!-- Membership Mega Menu -->
         <li class="nav-item dropdown position-static">
-          <a class="nav-link dropdown-toggle" href="iei-Memb.aspx" id="membershipDropdown" role="button">
+          <a class="nav-link dropdown-toggle" href="iei-Memb.aspx" id="membershipDropdown" role="button" data-bs-toggle="dropdown">
             <i class="fa fa-users"></i> Membership
           </a>
           <div class="dropdown-menu p-4 mega-menu" aria-labelledby="membershipDropdown">
@@ -74,6 +88,7 @@
     </div>
   </div>
 </nav>
+<!-- End of Navbar -->
 
 <!-- Start of message from Chairman and Honorary Secretary -->
 <section class="d-flex flex-column align-items-center text-center py-5">
@@ -129,13 +144,6 @@
     <h1 class="display-4 fw-bold">Institution of Engineers - Sunabeda</h1>
     <p class="lead">Empowering Innovation • Engineering Excellence • National Progress</p>
     <h3 class="fst-italic mb-4">Welcome to the official portal of IEI - Sunabeda</h3>
-
-    <div class="d-flex justify-content-center flex-wrap gap-3">
-      <a href="/members" class="btn btn-warning fw-bold px-4 py-2">Members</a>
-      <a href="/academics" class="btn btn-warning fw-bold px-4 py-2">Academics</a>
-      <a href="/gallery" class="btn btn-warning fw-bold px-4 py-2">Photo Gallery</a>
-      <a href="/contact" class="btn btn-warning fw-bold px-4 py-2">Contact Us</a>
-    </div>
   </div>
 </section>
 
