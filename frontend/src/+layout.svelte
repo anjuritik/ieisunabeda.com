@@ -9,8 +9,8 @@
   <div class="menu">
     <a href="/">Home</a>
     <a href="/members">Members</a>
-    <a href="/academics">Academics</a>
-    <a href="/gallery">Gallery</a>
+    <!-- <a href="/academics">Academics</a>
+    <a href="/gallery">Gallery</a> -->
     <a href="/contact">Contact</a>
     <a href="/admin" class="admin-btn">Admin</a>
   </div>
