@@ -32,7 +32,7 @@ if (browser) {
     <!-- Top Buttons (Members, Academics, Contact Us) -->
     <div class="d-flex justify-content-center flex-wrap gap-3">
       <a href="/members" class="btn btn-light fw-normal text-dark px-3 py-2">Members</a>
-      <a href="/events" class="btn btn-light fw-normal text-dark px-3 py-2">Statuatory celebrations</a><!-- 
+      <a href="/celebrations" class="btn btn-light fw-normal text-dark px-3 py-2">Statuatory celebrations</a><!-- 
       <a href="/gallery" class="btn btn-light fw-normal text-dark px-3 py-2">Photo Gallery</a>-->
       <a href="/contact" class="btn btn-light fw-normal text-dark px-3 py-2">Contact Us</a> 
     </div>
