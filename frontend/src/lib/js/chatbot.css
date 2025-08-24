@@ -1,0 +1,114 @@
+
+/* Chat toggle button (floating robot icon) */
+.chatbot-toggler {
+  position: fixed;
+  bottom: 30px;
+  right: 35px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.chatbot-toggler img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.chatbot-toggler img:hover {
+  transform: scale(1.1);
+}
+
+/* Main chat popup window */
+.chatbot {
+  position: fixed;
+  right: 35px;
+  bottom: 100px;
+  width: 300px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 50px rgba(0,0,0,0.1), 0 20px 40px -24px rgba(0,0,0,0.5);
+  display: none;
+  z-index: 9998;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header bar of the chat */
+.chatbot header {
+  background-color: #724ae8;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.chatbot header .close-btn {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* Chat message area */
+.chatbot .chatbox {
+  padding: 10px;
+  max-height: 280px;
+  overflow-y: auto;
+  background: #f9f9f9;
+}
+
+/* Individual messages */
+.chatbot .chatbox .message {
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  max-width: 80%;
+  clear: both;
+  word-wrap: break-word;
+}
+
+.chatbot .chatbox .message.bot {
+  background-color: #e0e0e0;
+  float: left;
+}
+
+.chatbot .chatbox .message.user {
+  background-color: #724ae8;
+  color: white;
+  float: right;
+}
+
+/* Input area */
+.chatbot .chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chatbot .chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.chatbot .chat-input button {
+  padding: 0 15px;
+  background: #724ae8;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}

@@ -3,20 +3,62 @@
   import { setupDropdownHover } from '$lib/js/dropdown';
   import '$lib/js/dropdown.css';
   import '$lib/js/hero.css';
+  //import '$lib/js/chatbot.css';
   import { browser } from '$app/environment';
 
-if (browser) {
-  import('../lib/js/bootstrap.bundle.min.js').then(() => {
-    console.log('Bootstrap JS loaded successfully');
-  }).catch(err => {
-    console.error('Error loading Bootstrap JS', err);
+  if (browser) {
+    import('../lib/js/bootstrap.bundle.min.js')
+      .then(() => {
+        console.log('Bootstrap JS loaded successfully');
+      })
+      .catch(err => {
+        console.error('Error loading Bootstrap JS', err);
+      });
+  }
+  let chatOpen = false;
+
+  onMount(() => {
+    const chatBody = document.getElementById('chatBody');
+    const userInput = document.getElementById('userInput');
+    const sendBtn = document.getElementById('sendBtn');
+
+    sendBtn?.addEventListener('click', () => {
+      const text = userInput.value.trim();
+      if (!text) return;
+      appendMessage('user', text);
+      respondTo(text);
+      userInput.value = '';
+    });
+
+    userInput?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') sendBtn.click();
+    });
+
+    function appendMessage(sender, text) {
+      const msg = document.createElement('div');
+      msg.className = `message ${sender}`;
+      msg.textContent = text;
+      chatBody.appendChild(msg);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    function respondTo(question) {
+      const lower = question.toLowerCase();
+      let reply = "Sorry, I didn't catch that.";
+
+      if (lower.includes('engineers day')) {
+        reply = "Engineers' Day is celebrated on September 15.";
+      } else if (lower.includes('hi') || lower.includes('hello')) {
+        reply = "Hello there! How can I assist you today?";
+      }
+
+      setTimeout(() => appendMessage('bot', reply), 400);
+    }
   });
-}
-   onMount(() => {
-    setupDropdownHover();
-  }); 
-     
+
+
 </script>
+
 
 <!--Start of Navbar-->
 <nav class="navbar navbar-expand-sm navbar-light custom-navbar shadow-sm">
@@ -287,9 +329,119 @@ I eagerly anticipate the opportunity to work alongside each of you, as we naviga
     </marquee>
   </div>
 </section>
+<!-- Virtual Assistant -->
+<div class="virtual-assistant" id="virtualAssistant">
+  <img src="/Image/chatbot.png" alt="Chatbot Assistant" class="chatbot-icon" />
+</div>
+
+<!-- Chat Window -->
+<!-- Virtual Assistant -->
+<!-- Chat Toggle Button -->
+<div class="chatbot-toggler" on:click={() => chatOpen = !chatOpen}>
+  <img src="/Image/chatbot.png" alt="Chatbot" />
+</div>
+
+<!-- Chat Window -->
+{#if chatOpen}
+  <div class="chat-window">
+    <div class="chat-header">
+      Virtual Assistant
+      <button on:click={() => chatOpen = false}>×</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="message bot">Hi! How can I assist you today?</div>
+    </div>
+    <div class="chat-input">
+      <input id="userInput" placeholder="Ask me something..." />
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+{/if}
+
+
 
 
 <style>
+.chatbot-toggler {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+  }
+  .chatbot-toggler img {
+    width: 60px;
+    height: 60px;
+  }
+  .chat-window {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 280px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .chat-header {
+    background: #007bff;
+    color: white;
+    padding: 8px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .chat-body {
+    padding: 10px;
+    flex: 1;
+    overflow-y: auto;
+    background: #f9f9f9;
+  }
+  .chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+  }
+  .chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+  }
+  .chat-input button {
+    padding: 0 16px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  .message {
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    border-radius: 12px;
+    max-width: 80%;
+  }
+  .message.user {
+    background: #007bff;
+    color: white;
+    align-self: flex-end;
+  }
+  .message.bot {
+    background: #e0e0e0;
+    color: black;
+    align-self: flex-start;
+  }
+/*end of chatbot styel*/
+
+
+@keyframes floatText {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
   /* Ensure all images in the carousel have the same height and width */
   .uniform-img {
     height: 200px; /* Set desired height */
