@@ -86,7 +86,7 @@ if (browser) {
                 <a class="dropdown-item" href="iei-Memb.aspx#career-advancement">Career Advancement</a>
               </div>
               <div class="col-md-6 text-center align-self-center">
-                <a href="IEI-RegistrationForMembApp.aspx" class="btn btn-primary w-100"><strong>Apply for Membership</strong></a>
+                <a href="https://www.ieindia.org/AdminUI/IEI-OnlineMembership_V01.aspx" class="btn btn-primary w-100" target="_blank"><strong>Apply for Membership</strong></a>
               </div>
             </div>
           </div>
