@@ -110,7 +110,8 @@ if (browser) {
       <!-- Column 1: Chairman Photo, Name & Designation -->
       <div class="col-md-2 d-flex flex-column align-items-center mb-4">
         <!-- Chairman Photo -->
-        <img src="path-to-chairman-photo.jpg" alt="Chairman Photo" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px;">
+        <img src="/Image/chairman.png" alt="Chairman Photo" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px;">
+        <!-- Chairman Name & Designation -->
         <!-- Chairman Name & Designation -->
         <p class="fs-5 text-dark mb-1 text-primary">Premananda Maity</p>
         <p class="fs-6 text-muted mb-3">Chairman</p>
@@ -119,8 +120,9 @@ if (browser) {
       <!-- Column 2: Secretary Message -->
       <div class="col-md-4 d-flex flex-column align-items-center mb-4">
         <p class="text-secondary text-justify text-black text-xs" style="text-align: justify;">
-          It is with great pleasure and a sense of responsibility that I extend my warmest greetings to each one of you as the Chairman of the Odisha State Centre of The Institution of Engineers (India). Our center has a rich legacy of fostering engineering excellence, innovation, and professional development. As we embark on this journey together, I am committed to upholding the esteemed values and principles of our institution while steering us towards greater achievements.
-I invite all members to actively participate in our endeavors, contributing your expertise, ideas, and enthusiasm. Together, let us strive to elevate the engineering landscape in Odisha, driving progress and making a meaningful impact in our communities.
+          It is with great pleasure and a sense of responsibility that I extend my warmest greetings to each one of you as the Chairman of the Sunabeda Local  Centre of The Institution of Engineers (India). Our center has a rich legacy of fostering engineering excellence, innovation, and professional development. As we embark on this journey together, I am committed to upholding the esteemed values and principles of our institution while steering us towards greater achievements.
+<br>
+I invite all members to actively participate in our endeavors, contributing your expertise, ideas, and enthusiasm. Together, let us strive to elevate the engineering landscape in Sunabeda, driving progress and making a meaningful impact in our communities.
 I look forward to collaborating with each of you and leading our center to new heights of success.
 
 
@@ -130,7 +132,7 @@ I look forward to collaborating with each of you and leading our center to new h
       <!-- Column 3: Secretary Photo, Name & Designation -->
       <div class="col-md-2 d-flex flex-column align-items-center mb-4">
         <!-- Secretary Photo -->
-        <img src="path-to-secretary-photo.jpg" alt="Secretary Photo" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px;">
+        <img src="/Image/sec.png" alt="Secretary Photo" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px;">
         <!-- Secretary Name & Designation -->
         <p class="fs-5 text-dark mb-1">Sanjaya Bisyoee</p>
         <p class="fs-6 text-muted mb-3">Secretary General</p>
@@ -139,8 +141,9 @@ I look forward to collaborating with each of you and leading our center to new h
       <!-- Column 4: Chairman Message -->
       <div class="col-md-4 d-flex flex-column align-items-center mb-4">
         <p class="text-secondary text-justify text-black text-xs" style="text-align: justify;">
-          Dear Esteemed Members and Associates, It is both an honor and a privilege to serve as the Honorary Secretary of the Odisha State Centre of The Institution of Engineers (India). With a steadfast commitment to excellence, collaboration, and community service, I am dedicated to advancing our shared goals within the field of engineering. Together, let us strive to foster an environment of innovation, knowledge exchange, and professional growth. I extend a warm invitation to all members to actively participate in our center’s activities, contribute your insights, and be an integral part of our collective journey towards success.
+          Dear Esteemed Members and Associates, It is both an honor and a privilege to serve as the Honorary Secretary of the Sunabeda Local Centre of The Institution of Engineers (India). With a steadfast commitment to excellence, collaboration, and community service, I am dedicated to advancing our shared goals within the field of engineering. Together, let us strive to foster an environment of innovation, knowledge exchange, and professional growth. I extend a warm invitation to all members to actively participate in our center’s activities, contribute your insights, and be an integral part of our collective journey towards success.
 I eagerly anticipate the opportunity to work alongside each of you, as we navigate new horizons and make meaningful contributions to our profession and society.
+
         </p>
       </div>
 
