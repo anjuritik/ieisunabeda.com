@@ -1,38 +1,42 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
   import { setupDropdownHover } from '$lib/js/dropdown';
   import '$lib/js/dropdown.css';
   import '$lib/js/hero.css';
-  //import '$lib/js/chatbot.css';
   import { browser } from '$app/environment';
 
   if (browser) {
     import('../lib/js/bootstrap.bundle.min.js')
-      .then(() => {
-        console.log('Bootstrap JS loaded successfully');
-      })
-      .catch(err => {
-        console.error('Error loading Bootstrap JS', err);
-      });
+      .then(() => console.log('Bootstrap JS loaded successfully'))
+      .catch(err => console.error('Error loading Bootstrap JS', err));
   }
-  let chatOpen = false;
+
+  let chatOpen = false; // if you want to test immediately, set to true
+  let handlersAttached = false;
 
   onMount(() => {
+    // If chat is already open on mount, attach immediately
+    if (chatOpen) attachHandlers();
+  });
+
+  // When chatOpen becomes true, attach handlers after DOM updates
+  $: if (chatOpen && !handlersAttached) {
+    attachHandlers();
+  }
+
+  // Optional: when closing, allow re-attachment next time it opens
+  $: if (!chatOpen) {
+    handlersAttached = false;
+  }
+
+  async function attachHandlers() {
+    await tick(); // wait for the {#if} block to render
+
     const chatBody = document.getElementById('chatBody');
     const userInput = document.getElementById('userInput');
     const sendBtn = document.getElementById('sendBtn');
 
-    sendBtn?.addEventListener('click', () => {
-      const text = userInput.value.trim();
-      if (!text) return;
-      appendMessage('user', text);
-      respondTo(text);
-      userInput.value = '';
-    });
-
-    userInput?.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') sendBtn.click();
-    });
+    if (!chatBody || !userInput || !sendBtn) return; // safety guard
 
     function appendMessage(sender, text) {
       const msg = document.createElement('div');
@@ -54,10 +58,24 @@
 
       setTimeout(() => appendMessage('bot', reply), 400);
     }
-  });
 
+    // Attach listeners (now that elements exist)
+    sendBtn.addEventListener('click', () => {
+      const text = userInput.value.trim();
+      if (!text) return;
+      appendMessage('user', text);
+      respondTo(text);
+      userInput.value = '';
+    });
 
+    userInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') sendBtn.click();
+    });
+
+    handlersAttached = true;
+  }
 </script>
+
 
 
 <!-- Start of Horizontal Navbar -->

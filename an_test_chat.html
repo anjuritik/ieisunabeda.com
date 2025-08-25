@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <style>
+.chatbot-toggler {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+  }
+  .chatbot-toggler img {
+    width: 200px;
+    height: 160px;
+  }
+  .chat-window {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 280px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .chat-header {
+    background: #007bff;
+    color: white;
+    padding: 8px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .chat-body {
+    padding: 10px;
+    flex: 1;
+    overflow-y: auto;
+    background: #f9f9f9;
+  }
+  .chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+  }
+  .chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+  }
+  .chat-input button {
+    padding: 0 16px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  .message {
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    border-radius: 12px;
+    max-width: 80%;
+  }
+  .message.user {
+    background: #007bff;
+    color: white;
+    align-self: flex-end;
+  }
+  .message.bot {
+    background: #e0e0e0;
+    color: black;
+    align-self: flex-start;
+  }
+    </style>
+  </head>
+  <body>
+    <div class="chat-window">
+        <div class="chat-header">
+          Virtual Assistant
+          <button on:click={() => chatOpen = false}>×</button>
+        </div>
+        <div class="chat-body" id="chatBody">
+          <div class="message bot">Hi! How can I assist you today?</div>
+        </div>
+        <div class="chat-input">
+          <input id="userInput" placeholder="Ask me something..." />
+          <button id="sendBtn">Send</button>
+        </div>
+      </div>
+    <script src="index.js"></script>
+  </body>
+</html>
