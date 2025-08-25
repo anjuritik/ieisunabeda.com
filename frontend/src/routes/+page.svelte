@@ -60,86 +60,43 @@
 </script>
 
 
-<!--Start of Navbar-->
-<nav class="navbar navbar-expand-sm navbar-light custom-navbar shadow-sm">
+<!-- Start of Horizontal Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
   <div class="container-fluid">
-    <!-- Navbar Brand -->
-    <a class="navbar-brand fw-bold" href="#">IEI</a>
 
-    <!-- Toggler for Mobile View -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold text-primary" href="iei-home.aspx">IEI</a>
+
+    <!-- Mobile Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" 
+            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Top Buttons (Members, Academics, Contact Us) -->
-    <div class="d-flex justify-content-center flex-wrap gap-3">
-      <a href="/members" class="btn btn-light fw-normal text-dark px-3 py-2">Members</a>
-      <a href="/celebrations" class="btn btn-light fw-normal text-dark px-3 py-2">Statuatory celebrations</a><!-- 
-      <a href="/gallery" class="btn btn-light fw-normal text-dark px-3 py-2">Photo Gallery</a>-->
-      <a href="/contact" class="btn btn-light fw-normal text-dark px-3 py-2">Contact Us</a> 
-    </div>
-
-    <!-- Navbar Collapse -->
+    <!-- Navbar Links -->
     <div class="collapse navbar-collapse" id="mainNavbar">
-      <!-- Centered Navbar Links -->
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-
-        <!-- Home Mega Menu -->
-        <li class="nav-item dropdown position-static">
-          <a class="nav-link dropdown-toggle" href="iei-Home.aspx" id="homeDropdown" role="button" data-bs-toggle="dropdown">
-            <i class="fa fa-home"></i> Home
-          </a>
-          <div class="dropdown-menu p-4 mega-menu" aria-labelledby="homeDropdown">
-            <div class="row">
-              <div class="col-md-6">
-                <h6>Explore IEI</h6>
-                <a class="dropdown-item" href="iei-home.aspx#about-iei">About IEI</a>
-                <a class="dropdown-item" href="iei-home.aspx#history-iei">History</a>
-                <a class="dropdown-item" href="iei-home.aspx#services">Services</a>
-                <a class="dropdown-item" href="iei-home.aspx#forthcoming-events">Forthcoming Events</a>
-                <a class="dropdown-item" href="IEI-Tender.aspx">Tender</a>
-                <a class="dropdown-item" href="ajax/Custom/IEI_Arbitrator_Panel_New.html">Arbitration</a>
-              </div>
-              <div class="col-md-6">
-                <h6>More</h6>
-                <a class="dropdown-item" href="ajax/Custom/RoyalCharter.html">Royal Charter</a>
-                <a class="dropdown-item" href="IEI_Council_Members.aspx">IEI Council</a>
-                <a class="dropdown-item" href="ajax/Custom/Committees.html">Committees</a>
-                <a class="dropdown-item" href="iei-home.aspx#links-downloads">Links & Downloads</a>
-                <a class="dropdown-item" href="iei_career.html">Careers</a>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <!-- Membership Mega Menu -->
-        <li class="nav-item dropdown position-static">
-          <a class="nav-link dropdown-toggle" href="iei-Memb.aspx" id="membershipDropdown" role="button" data-bs-toggle="dropdown">
-            <i class="fa fa-users"></i> Membership
-          </a>
-          <div class="dropdown-menu p-4 mega-menu" aria-labelledby="membershipDropdown">
-            <div class="row">
-              <div class="col-md-6">
-                <h6>Member Info</h6>
-                <a class="dropdown-item" href="iei-Memb.aspx#members-benefit">Benefits to Members</a>
-                <a class="dropdown-item" href="iei-Memb.aspx#membership-grade">Grades of Membership</a>
-                <a class="dropdown-item" href="iei-Memb.aspx#Status_Membership">Application Status</a>
-                <a class="dropdown-item" href="iei-Memb.aspx#chartered-engineering">Chartered Engineer</a>
-                <a class="dropdown-item" href="iei-Memb.aspx#career-advancement">Career Advancement</a>
-              </div>
-              <div class="col-md-6 text-center align-self-center">
-                <a href="https://www.ieindia.org/AdminUI/IEI-OnlineMembership_V01.aspx" class="btn btn-primary w-100" target="_blank"><strong>Apply for Membership</strong></a>
-              </div>
-            </div>
-          </div>
-        </li>
-
+        <li class="nav-item"><a class="nav-link fw-semibold" href="iei-home.aspx"><i class="fa fa-home"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="iei-Memb.aspx"><i class="fa fa-users"></i> Membership</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/members">Members</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/celebrations">Statutory Celebrations</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="IEI_Council_Members.aspx">IEI Council</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="iei_career.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/contact">Contact Us</a></li>
       </ul>
+
+      <!-- Right-side Button -->
+      <div class="d-flex">
+        <a href="https://www.ieindia.org/AdminUI/IEI-OnlineMembership_V01.aspx" 
+           class="btn btn-primary px-3" target="_blank">
+          Apply Now
+        </a>
+      </div>
     </div>
   </div>
 </nav>
+<!-- End of Horizontal Navbar -->
 
-<!-- End of Navbar -->
 
 <!-- Start of message from Chairman and Honorary Secretary -->
 <section class="d-flex flex-column align-items-center text-center py-4 border-bottom">
@@ -329,11 +286,6 @@ I eagerly anticipate the opportunity to work alongside each of you, as we naviga
     </marquee>
   </div>
 </section>
-<!-- Virtual Assistant -->
-<div class="virtual-assistant" id="virtualAssistant">
-  <img src="/Image/chatbot.png" alt="Chatbot Assistant" class="chatbot-icon" />
-</div>
-
 <!-- Chat Window -->
 <!-- Virtual Assistant -->
 <!-- Chat Toggle Button -->
@@ -369,8 +321,8 @@ I eagerly anticipate the opportunity to work alongside each of you, as we naviga
     cursor: pointer;
   }
   .chatbot-toggler img {
-    width: 60px;
-    height: 60px;
+    width: 200px;
+    height: 160px;
   }
   .chat-window {
     position: fixed;
