@@ -83,7 +83,7 @@
   <div class="container-fluid">
 
     <!-- Brand -->
-    <a class="navbar-brand fw-bold text-primary" href="iei-home.aspx">IEI</a>
+    <a class="navbar-brand fw-bold text-primary" href="https://www.ieindia.org/webui/iei-home.aspx">IEI</a>
 
     <!-- Mobile Toggler -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" 
@@ -92,10 +92,10 @@
     </button>
 
     <!-- Navbar Links -->
-    <div class="collapse navbar-collapse" id="mainNavbar">
+    <div class="collapse navbar-collapse bg-gradient-primary" id="mainNavbar">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link fw-semibold" href="iei-home.aspx"><i class="fa fa-home"></i> Home</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="iei-Memb.aspx"><i class="fa fa-users"></i> Membership</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/"><i class="fa fa-home"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/"><i class="fa fa-users"></i> Membership</a></li>
         <li class="nav-item"><a class="nav-link fw-semibold" href="/members">Members</a></li>
         <li class="nav-item"><a class="nav-link fw-semibold" href="/celebrations">Statutory Celebrations</a></li>
         <li class="nav-item"><a class="nav-link fw-semibold" href="IEI_Council_Members.aspx">IEI Council</a></li>
