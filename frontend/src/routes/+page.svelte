@@ -101,8 +101,8 @@
         </li>
         <li class="nav-item"><a class="nav-link fw-semibold" href="/members">Members</a></li>
         <li class="nav-item"><a class="nav-link fw-semibold" href="/celebrations">Statutory Celebrations</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="IEI_Council_Members.aspx">IEI Council</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="iei_career.html">Careers</a></li>
+        <!-- <li class="nav-item"><a class="nav-link fw-semibold" href="IEI_Council_Members.aspx">IEI Council</a></li> -->
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/activities">All activities</a></li>
         <li class="nav-item"><a class="nav-link fw-semibold" href="/contact">Contact Us</a></li>
       </ul>
 
