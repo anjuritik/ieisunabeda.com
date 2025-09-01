@@ -95,7 +95,10 @@
     <div class="collapse navbar-collapse bg-gradient-primary" id="mainNavbar">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link fw-semibold" href="/"><i class="fa fa-home"></i> Home</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="/"><i class="fa fa-users"></i> Membership</a></li>
+        <!-- <li class="nav-item"><a class="nav-link fw-semibold" href="/"><i class="fa fa-users"></i> Membership</a></li> -->
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#" data-bs-toggle="modal" data-bs-target="#pptModal">Memebrs Benefits</a>
+        </li>
         <li class="nav-item"><a class="nav-link fw-semibold" href="/members">Members</a></li>
         <li class="nav-item"><a class="nav-link fw-semibold" href="/celebrations">Statutory Celebrations</a></li>
         <li class="nav-item"><a class="nav-link fw-semibold" href="IEI_Council_Members.aspx">IEI Council</a></li>
@@ -328,6 +331,21 @@ I eagerly anticipate the opportunity to work alongside each of you, as we naviga
   </div>
 {/if}
 
+<!-- Modal Pop UP -->
+<div class="modal fade" id="pptModal" tabindex="-1" aria-labelledby="pptModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="pptModalLabel">Membership Presentation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Embed PDF or iframe -->
+        <iframe src="/Image/member_benefit.pdf" style="width:100%; height:600px;" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
